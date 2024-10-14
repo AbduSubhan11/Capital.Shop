@@ -1,13 +1,44 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 function Footer() {
+  const [information, setInformation] = useState(false);
+  const [categories, setCategories] = useState(false);
+  const [help, setHelp] = useState(false);
+  const [newsLater, setNewsLater] = useState(false);
   return (
     <footer className="bg-[#F4F4F4] mt-32">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-8 ">
         <div className="space-y-9">
-          <h1 className="text-xl font-bold">INFORMATION</h1>
-          <div className="flex flex-col space-y-2">
+          <div
+            className="text-xl font-bold flex items-center"
+            onClick={() => setInformation(!information)}
+          >
+            INFORMATION
+            <svg
+              className={`w-8 h-7 md:hidden text-gray-800 transition-transform duration-300 ${
+                information ? "rotate-45" : ""
+              }`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={information ? "M6 18L18 6M6 6l12 " : "M12 4v16M4 12h16"}
+              />
+            </svg>
+          </div>
+
+          <div
+            className={`flex flex-col space-y-2 ${
+              information ? "" : "md:flex hidden"
+            }`}
+          >
             <Link
               href="/about"
               className="hover:underline underline-offset-4 w-fit hover:text-[#A4A4A4]"
@@ -36,8 +67,33 @@ function Footer() {
         </div>
 
         <div className="space-y-9">
-          <h1 className="text-xl font-bold">CATEGORIES</h1>
-          <div className="flex flex-col space-y-2">
+          <div
+            className="text-xl font-bold flex items-center"
+            onClick={() => setCategories(!categories)}
+          >
+            CATEGORIES
+            <svg
+              className={`w-8 h-7 md:hidden text-gray-800 transition-transform duration-300 ${
+                categories ? "rotate-45" : ""
+              }`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={categories ? "M6 18L18 6M6 6l12 " : "M12 4v16M4 12h16"}
+              />
+            </svg>
+          </div>
+          <div
+            className={`flex flex-col space-y-2 ${
+              categories ? "" : "md:flex hidden"
+            }`}
+          >
             <Link
               href="/shop"
               className="hover:underline underline-offset-4 w-fit hover:text-[#A4A4A4]"
@@ -66,8 +122,33 @@ function Footer() {
         </div>
 
         <div className="space-y-9">
-          <h1 className="text-xl font-bold">HELP</h1>
-          <div className="flex flex-col space-y-1">
+          <div
+            className="text-xl font-bold flex items-center"
+            onClick={() => setHelp(!help)}
+          >
+            HELP
+            <svg
+              className={`w-8 h-7 md:hidden text-gray-800 transition-transform duration-300 ${
+                help ? "rotate-45" : ""
+              }`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={help ? "M6 18L18 6M6 6l12 " : "M12 4v16M4 12h16"}
+              />
+            </svg>
+          </div>
+          <div
+            className={`flex flex-col space-y-2 ${
+              help ? "" : "md:flex hidden"
+            }`}
+          >
             <Link
               href=""
               className="hover:underline underline-offset-4 w-fit hover:text-[#A4A4A4]"
@@ -96,8 +177,33 @@ function Footer() {
         </div>
 
         <div className="space-y-9">
-          <h1 className="text-xl font-bold">NEWSLETTER</h1>
-          <div className="flex flex-col space-y-4">
+          <h1
+            className="text-xl font-bold flex items-center"
+            onClick={() => setNewsLater(!newsLater)}
+          >
+            NEWSLETTER
+            <svg
+              className={`w-8 h-7 md:hidden text-gray-800 transition-transform duration-300 ${
+                newsLater ? "rotate-45" : ""
+              }`}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d={newsLater ? "M6 18L18 6M6 6l12 " : "M12 4v16M4 12h16"}
+              />
+            </svg>
+          </h1>
+          <div
+            className={`flex flex-col space-y-4 ${
+              newsLater ? "" : "md:flex hidden"
+            }`}
+          >
             <p>
               Enter your email below to be the first to know about new
               collections and product launches.
