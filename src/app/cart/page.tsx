@@ -13,7 +13,7 @@ type Product = {
   images: string;
 };
 
-function page() {
+function Page() {
   const [remove, setRemove] = useState<number>();
   const cartData = JSON.parse(localStorage.getItem("cart") || "[]");
   const otherCartData = cartData.filter((filter: Product) => filter.id !== remove);
@@ -129,4 +129,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

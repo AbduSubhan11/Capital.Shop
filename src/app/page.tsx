@@ -3,6 +3,8 @@ import Link from "next/link";
 import DelieverDetails from "./Components/DelieverDetails";
 import LinkImg from "./Components/LinkImg";
 import FewCollecction from "./Components/FewCollecction";
+import heroesImg from "../../public/Image/heroes pic.jpg"
+import Image from "next/image";
 
 function Heroes() {
   return (
@@ -35,8 +37,9 @@ function Heroes() {
           </div>
         </div>
         <div className="min-w-[50%]">
-          <img
-            src="./Image/heroes pic.jpg"
+          <Image
+            src={heroesImg}
+            alt=""
             className="object-cover w-full h-auto"
           />
         </div>

@@ -1,8 +1,9 @@
 "use client";
+import Image from "next/image";
 import ProductsData from "../../../../ProductsData";
 import { useParams } from "next/navigation";
 
-function page() {
+function Page() {
   const params = useParams();
   const productId = Number(params.id);
   const productData = ProductsData.filter((filt) => filt !== undefined);
@@ -22,7 +23,7 @@ function page() {
           className="grid md:grid-cols-2 gap-10 md:p-20 p-5"
         >
           <div className="h-[500px]">
-            <img src={product.images} alt="img" className="w-full h-full" />
+            <Image src={product.images} alt="img" className="w-full h-full" />
           </div>
           <div className="space-y-4 ">
             <div className="space-y-2">
@@ -67,4 +68,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

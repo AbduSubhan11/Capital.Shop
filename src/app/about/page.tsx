@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import aboutImg from "../../../public/Image/about img.webp"
 
 function About() {
   return (
@@ -11,8 +13,9 @@ function About() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 place-items-center w-full ">
         <div className="sm:w-[50%] md:h-[80%]">
-          <img
-            src="https://images.pexels.com/photos/7234482/pexels-photo-7234482.jpeg?auto=compress&cs=tinysrgb&w=600"
+          <Image
+            src={aboutImg}
+            alt=""
             className="object-cover w-full h-full"
           />
         </div>
