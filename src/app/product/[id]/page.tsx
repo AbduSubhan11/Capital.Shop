@@ -10,8 +10,8 @@ function Page() {
   const filterData = productData.filter((pro) => pro.id == productId);
 
   const CartBtnHandler = () => {
-    let existCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    let updateCart = [...existCart, filterData];
+    const existCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const updateCart = [...existCart, filterData];
     localStorage.setItem("cart", JSON.stringify(updateCart.flat(1)));
   };
 
