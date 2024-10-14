@@ -14,7 +14,7 @@ type Product = {
   images: string;
 };
 
-function page() {
+function Page() {
   const [removeWish, setRemoveWish] = useState<number>();
   const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
   const otherWishList = wishlist.filter((item: Product) => item.id !== removeWish);
@@ -96,4 +96,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 type Product = {
@@ -41,7 +42,7 @@ function Page() {
                 key={pro.id}
               >
                 <div className="flex ">
-                  <img
+                  <Image
                     src={pro.images}
                     alt=""
                     className="md:w-[16vw] w-[18vw] md:h-[10vw] h-[16vw]"
