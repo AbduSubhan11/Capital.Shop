@@ -1,4 +1,9 @@
 import React from "react";
+import freeShipping from "../../../public/Image/Free Shipping img.png"
+import securePayment from "../../../public/Image/Secure Payment img.png"
+import Return from "../../../public/Image/Return Back img.png"
+import Call from "../../../public/Image/Call Support img.png"
+import Image from "next/image";
 
 function DelieverDetails() {
   return (
@@ -6,7 +11,7 @@ function DelieverDetails() {
 
       <div className="md:flex-col flex justify-center items-center " >
         <div className="md:w-[8vw] w-[30vw] ">
-          <img src="./Image/Free Shipping img.png" className="w-full h-auto object-cover" />
+          <Image src={freeShipping} alt="" className="w-full h-auto object-cover" />
         </div>
         <div className="text-center">
             <h1 className="text-xl font-bold">Free Shipping</h1>
@@ -16,7 +21,7 @@ function DelieverDetails() {
 
       <div className="md:flex-col flex justify-center items-center ">
         <div className="md:w-[8vw] w-[25vw]"> 
-          <img src="./Image/Secure Payment img.png" alt="" />
+          <Image src={securePayment} alt="" />
         </div>
         <div className="text-center">
             <h1 className="text-xl font-bold">Secure Payment</h1>
@@ -26,7 +31,7 @@ function DelieverDetails() {
 
       <div className="md:flex-col flex justify-center items-center ">
         <div className="md:w-[8vw] w-[25vw]">
-          <img src="./Image/Return Back img.png" alt="" />
+          <Image src={Return} alt="" />
         </div>
         <div className="text-center">
             <h1 className="text-xl font-bold">Easy Returns</h1>
@@ -36,7 +41,7 @@ function DelieverDetails() {
 
       <div className="md:flex-col flex justify-center items-center ">
         <div className="md:w-[8vw] w-[25vw]">
-          <img src="./Image/Call Support img.png" alt="" />
+          <Image src={Call} alt="" />
         </div>
         <div className="text-center">
             <h1 className="text-xl font-bold">Special Support</h1>
