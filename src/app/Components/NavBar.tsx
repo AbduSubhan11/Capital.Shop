@@ -6,8 +6,6 @@ import Portal from "../../../Portal/Portal";
 
 function NavBar() {
   const [isPortal, setIsPortal] = useState(false);
-  const wishData = JSON.parse(localStorage.getItem("wishlist") || "[]");
-  const cartData = JSON.parse(localStorage.getItem("cart") || "[]");
   const pathname = usePathname();
   const [isHamburger, setIsHamburger] = useState(false);
 
@@ -105,7 +103,7 @@ function NavBar() {
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
         >
           <div className="bg-[#03AB95] text-white rounded-[50%] h-5 w-5 absolute bottom-4 right-0 flex justify-center items-center ">
-            {wishData.length}
+            0
           </div>
           <svg
             className="h-6 w-8 hover:text-[#898989]"
@@ -130,7 +128,7 @@ function NavBar() {
           onClick={toggleMenu}
         >
           <div className="bg-[#03AB95] text-white rounded-[50%] h-5 w-5 absolute bottom-4 right-0 flex justify-center items-center text-sm ">
-            {cartData.length}
+            0
           </div>
           <svg
             className="h-6 w-8 hover:text-[#898989]"
