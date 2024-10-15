@@ -9,12 +9,6 @@ function Page() {
   const productData = ProductsData.filter((filt) => filt !== undefined);
   const filterData = productData.filter((pro) => pro.id == productId);
 
-  const CartBtnHandler = () => {
-    const existCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    const updateCart = [...existCart, filterData];
-    localStorage.setItem("cart", JSON.stringify(updateCart.flat(1)));
-  };
-
   return (
     <>
       {filterData.map((product) => (
@@ -53,7 +47,6 @@ function Page() {
               <h2 className="text-2xl">{product.description}</h2>
             </div>
             <button
-              onClick={CartBtnHandler}
               className="relative inline-block md:px-10 px-3 py-2 font- text-white border-2 border-black group bg-[#202426] overflow-hidden"
             >
               <span className="relative z-10 transition-colors duration-300 group-hover:text-[#202426]">

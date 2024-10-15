@@ -98,7 +98,7 @@ function NavBar() {
 
         {/* HEART ICON */}
         <Link
-          href="/wishlist"
+          href=""
           onClick={toggleMenu}
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
         >
@@ -123,7 +123,7 @@ function NavBar() {
 
         {/* CART ICON         */}
         <Link
-          href="/cart"
+          href=""
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
           onClick={toggleMenu}
         >

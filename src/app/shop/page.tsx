@@ -21,11 +21,6 @@ function Cards() {
   const [searchValue, setSearchValue] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
 
-  const wishBtnHandler = (product: Product) => {
-    const existWishData = JSON.parse(localStorage.getItem("wishlist") || "[]");
-    const updateWishData = [...existWishData, product];
-    localStorage.setItem("wishlist", JSON.stringify(updateWishData));
-  };
 
   useEffect(() => {
     const filterData = ProductsData.filter((product) => product !== undefined);
@@ -129,7 +124,6 @@ function Cards() {
                 <div className="flex justify-between">
                   <h1>{product.name}</h1>
                   <svg
-                    onClick={() => wishBtnHandler(product)}
                     className="h-7 w-10 hover:cursor-pointer hover:fill-red-600"
                     width="24"
                     height="24"
