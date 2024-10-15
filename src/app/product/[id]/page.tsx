@@ -9,6 +9,8 @@ function Page() {
   const productData = ProductsData.filter((filt) => filt !== undefined);
   const filterData = productData.filter((pro) => pro.id == productId);
 
+
+
   return (
     <>
       {filterData.map((product) => (
@@ -17,7 +19,7 @@ function Page() {
           className="grid md:grid-cols-2 gap-10 md:p-20 p-5"
         >
           <div className="h-[500px]">
-            <Image src={product.images} alt="img" className="w-full h-full" />
+            <Image src={product.images} alt="img" width={1000} height={1000} className="w-full h-full" />
           </div>
           <div className="space-y-4 ">
             <div className="space-y-2">

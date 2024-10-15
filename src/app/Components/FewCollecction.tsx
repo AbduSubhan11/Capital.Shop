@@ -1,4 +1,4 @@
-"use client"
+
 import Image from "next/image";
 import shirt from "../../../public/Image/shirt collection.webp";
 import glasses from "../../../public/Image/sun glasses collection.webp";
