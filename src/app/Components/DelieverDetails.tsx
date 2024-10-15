@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import freeShipping from "../../../public/Image/Free Shipping img.png"
 import securePayment from "../../../public/Image/Secure Payment img.png"
