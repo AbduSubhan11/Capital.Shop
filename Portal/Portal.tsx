@@ -2,7 +2,12 @@ import Link from "next/link";
 import React from "react";
 import { createPortal } from "react-dom";
 
-const Portal = ({ onClick, setOnClick }) => {
+interface PortalProps {
+  onClick: boolean;
+  setOnClick: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Portal: React.FC<PortalProps> = ({ onClick, setOnClick }) => {
   const data = document.getElementById("portalRoot");
 
   if (!data) {
