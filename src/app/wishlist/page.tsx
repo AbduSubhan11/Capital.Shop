@@ -17,8 +17,9 @@ type Product = {
 
 function Page() {
   const { wishItems, removeFromWish } = useWish();
-  const removeWishHandler = (product: number) => {
-    removeFromWish;(product)
+
+  const removeWishHandler = (productId: number) => {
+    removeFromWish(productId)
   };
 
   return (
