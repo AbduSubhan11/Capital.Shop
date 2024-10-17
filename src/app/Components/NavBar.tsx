@@ -3,11 +3,15 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Portal from "../../../Portal/Portal";
+import { useCart } from "../../../context/cartContext";
+import { useWish } from "../../../context/wishlistContext";
 
 function NavBar() {
   const [isPortal, setIsPortal] = useState(false);
   const pathname = usePathname();
   const [isHamburger, setIsHamburger] = useState(false);
+  const {cartItems} = useCart()
+  const {wishItems}  =useWish()
 
   const hamburHandler = () => {
     setIsHamburger(!isHamburger);
@@ -98,12 +102,12 @@ function NavBar() {
 
         {/* HEART ICON */}
         <Link
-          href=""
+          href="/wishlist"
           onClick={toggleMenu}
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
         >
           <div className="bg-[#03AB95] text-white rounded-[50%] h-5 w-5 absolute bottom-4 right-0 flex justify-center items-center ">
-            0
+            {wishItems.length}
           </div>
           <svg
             className="h-6 w-8 hover:text-[#898989]"
@@ -123,12 +127,12 @@ function NavBar() {
 
         {/* CART ICON         */}
         <Link
-          href=""
+          href="/cart"
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
           onClick={toggleMenu}
         >
           <div className="bg-[#03AB95] text-white rounded-[50%] h-5 w-5 absolute bottom-4 right-0 flex justify-center items-center text-sm ">
-            0
+            {cartItems.length}
           </div>
           <svg
             className="h-6 w-8 hover:text-[#898989]"

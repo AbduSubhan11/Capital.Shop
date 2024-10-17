@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ProductsData from "../../../ProductsData";
 import Link from "next/link";
 import Image from "next/image";
+import { useWish } from "../../../context/wishlistContext";
 
 type Product = {
   id: number;
@@ -20,8 +21,12 @@ function Cards() {
   const [allData, setAllData] = useState<Product[]>([]);
   const [searchValue, setSearchValue] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
+  const {addToWish} = useWish()
 
-
+  const WishBtnHandler = (product:Product)=>{
+    addToWish(product)
+  }
+  
   useEffect(() => {
     const filterData = ProductsData.filter((product) => product !== undefined);
     setAllData(filterData);
@@ -124,6 +129,7 @@ function Cards() {
                 <div className="flex justify-between">
                   <h1>{product.name}</h1>
                   <svg
+                    onClick={()=>WishBtnHandler(product)}
                     className="h-7 w-10 hover:cursor-pointer hover:fill-red-600"
                     width="24"
                     height="24"

@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import { CartProvider} from "../../context/cartContext";
+import { WishProvider} from "../../context/wishlistContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,12 +33,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <cartContext.Provider value={"heeee"}> */}
-        <div id="portalRoot"></div>
-        <NavBar />
-        {children}
-        <Footer />
-        {/* </cartContext.Provider> */}
+        <CartProvider>
+          <WishProvider>
+            <div id="portalRoot"></div>
+            <NavBar />
+            {children}
+            <Footer />
+          </WishProvider>
+        </CartProvider>
       </body>
     </html>
   );
