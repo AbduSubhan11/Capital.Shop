@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Portal from "../../../Portal/Portal";
 import { useCart } from "../../../context/cartContext";
 import { useWish } from "../../../context/wishlistContext";
 
@@ -98,7 +97,7 @@ function NavBar() {
             <circle cx="12" cy="7" r="4" />
           </svg>
         </Link>
-        <Portal onClick={isPortal} setOnClick={setIsPortal} />
+        {/* <Portal onClick={isPortal} setOnClick={setIsPortal} /> */}
 
         {/* HEART ICON */}
         <Link
