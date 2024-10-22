@@ -234,7 +234,7 @@ function Footer() {
         </div>
       </div>
       <div className="text-center p-5">
-        <h1>Copyright with ❤️ by SUBHAN | All rights reserved</h1>
+        <h1>Developed by Abdu Subhan | All rights reserved</h1>
       </div>
     </footer>
   );
