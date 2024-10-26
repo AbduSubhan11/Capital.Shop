@@ -12,7 +12,6 @@ export function CartProvider({ children }: { children:any }) {
   const addToCart = (item: {}) => {
     setCartItems((prevItems) => [...prevItems, item]);
   };
-  
 
   return (
     <CartContext.Provider value={{ cartItems, addToCart , removeFromCart}}>

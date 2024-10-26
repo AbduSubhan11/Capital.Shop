@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -41,7 +41,7 @@ function Contact() {
           </svg>
           <p className="font-bold sm:text-2xl text-xl mt-2">Email</p>
           <p className="text-gray-400 sm:text-2xl text-xl">
-            ranasubhanrajput6677@gmail.com
+            abdusubhan6678@gmail.com
           </p>
         </div>
 
