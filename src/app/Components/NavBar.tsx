@@ -6,11 +6,10 @@ import { useCart } from "../../../context/cartContext";
 import { useWish } from "../../../context/wishlistContext";
 
 function NavBar() {
-  // const [isPortal, setIsPortal] = useState(false);
   const pathname = usePathname();
   const [isHamburger, setIsHamburger] = useState(false);
-  const {cartItems} = useCart()
-  const {wishItems}  =useWish()
+  const { cartItems } = useCart();
+  const { wishItems } = useWish();
 
   const hamburHandler = () => {
     setIsHamburger(!isHamburger);
@@ -80,7 +79,6 @@ function NavBar() {
         {/* SIGN IN ICON         */}
         <Link
           href=""
-          // onClick={() => setIsPortal(true)}
           className={`relative ${isHamburger ? "top-[330px]" : ""}`}
         >
           <svg
@@ -97,7 +95,6 @@ function NavBar() {
             <circle cx="12" cy="7" r="4" />
           </svg>
         </Link>
-        {/* <Portal onClick={isPortal} setOnClick={setIsPortal} /> */}
 
         {/* HEART ICON */}
         <Link
