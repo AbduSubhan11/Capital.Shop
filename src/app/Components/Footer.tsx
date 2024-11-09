@@ -12,7 +12,7 @@ function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-8 ">
         <div className="space-y-9">
           <div
-            className="text-xl font-bold flex items-center"
+            className="text-xl font-bold flex items-center justify-between"
             onClick={() => setInformation(!information)}
           >
             INFORMATION
@@ -68,7 +68,7 @@ function Footer() {
 
         <div className="space-y-9">
           <div
-            className="text-xl font-bold flex items-center"
+            className="text-xl font-bold flex items-center justify-between"
             onClick={() => setCategories(!categories)}
           >
             CATEGORIES
@@ -123,7 +123,7 @@ function Footer() {
 
         <div className="space-y-9">
           <div
-            className="text-xl font-bold flex items-center"
+            className="text-xl font-bold flex items-center justify-between"
             onClick={() => setHelp(!help)}
           >
             HELP
@@ -178,7 +178,7 @@ function Footer() {
 
         <div className="space-y-9">
           <h1
-            className="text-xl font-bold flex items-center"
+            className="text-xl font-bold flex items-center justify-between"
             onClick={() => setNewsLater(!newsLater)}
           >
             NEWSLETTER
