@@ -24,17 +24,7 @@ function Page() {
   const { addToCart } = useCart();
 
   const handleAddToCart = (product: Product) => {
-    addToCart({
-      id: product.id,
-      name: product.name,
-      category: product.category,
-      price: product.price,
-      brand: product.brand,
-      stock: product.stock,
-      description: product.description,
-      rating: product.rating,
-      images: product.images,
-    });
+    addToCart(product);
   };
 
   return (
