@@ -2,9 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Linkimg1 from "../../../public/Image/Link Img 1.webp"
-import Linkimg2 from "../../../public/Image/Link img 2.webp"
-import Linkimg3 from "../../../public/Image/Link Img 3.webp"
+import Linkimg1 from "../../public/Image/Link Img 1.webp"
+import Linkimg2 from "../../public/Image/Link img 2.webp"
+import Linkimg3 from "../../public/Image/Link Img 3.webp"
 
 function LinkImg() {
   return (

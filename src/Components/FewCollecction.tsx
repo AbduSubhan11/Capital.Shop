@@ -1,8 +1,8 @@
 
 import Image from "next/image";
-import shirt from "../../../public/Image/shirt collection.webp";
-import glasses from "../../../public/Image/sun glasses collection.webp";
-import shoes from "../../../public/Image/shoes collection.webp";
+import shirt from "../../public/Image/shirt collection.webp";
+import glasses from "../../public/Image/sun glasses collection.webp";
+import shoes from "../../public/Image/shoes collection.webp";
 import Link from "next/link";
 
 function FewCollecction() {

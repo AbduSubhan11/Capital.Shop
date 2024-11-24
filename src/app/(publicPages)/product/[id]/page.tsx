@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import ProductsData from "../../../../ProductsData";
+import ProductsData from "../../../../../ProductsData";
 import { useParams } from "next/navigation";
-import { useCart } from "../../../../context/cartContext";
+import { useCart } from "../../../../../context/cartContext";
 
 type Product = {
   id: number;

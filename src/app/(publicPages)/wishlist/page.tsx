@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { useWish } from "../../../context/wishlistContext";
+import { useWish } from "../../../../context/wishlistContext";
 
 type Product = {
   id: number;

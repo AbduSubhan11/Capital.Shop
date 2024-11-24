@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer";
 import { CartProvider } from "../../context/cartContext";
 import { WishProvider } from "../../context/wishlistContext";
 
@@ -34,11 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartProvider>
-          <WishProvider>
-            <NavBar />
-            {children}
-            <Footer />
-          </WishProvider>
+          <WishProvider>{children}</WishProvider>
         </CartProvider>
       </body>
     </html>

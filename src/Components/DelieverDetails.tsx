@@ -1,8 +1,8 @@
 import React from "react";
-import freeShipping from "../../../public/Image/Free Shipping img.png"
-import securePayment from "../../../public/Image/Secure Payment img.png"
-import Return from "../../../public/Image/Return Back img.png"
-import Call from "../../../public/Image/Call Support img.png"
+import freeShipping from "../../public/Image/Free Shipping img.png"
+import securePayment from "../../public/Image/Secure Payment img.png"
+import Return from "../../public/Image/Return Back img.png"
+import Call from "../../public/Image/Call Support img.png"
 import Image from "next/image";
 
 function DelieverDetails() {

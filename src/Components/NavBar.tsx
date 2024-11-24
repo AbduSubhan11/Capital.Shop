@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCart } from "../../../context/cartContext";
-import { useWish } from "../../../context/wishlistContext";
+import { useCart } from "../../context/cartContext";
+import { useWish } from "../../context/wishlistContext";
 
 function NavBar() {
   const pathname = usePathname();
