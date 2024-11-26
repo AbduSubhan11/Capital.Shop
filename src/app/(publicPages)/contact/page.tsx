@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React from "react";
 import DelieverDetails from "../../../Components/DelieverDetails";
 
@@ -74,18 +73,28 @@ function Contact() {
       {/* FORM */}
       <div className="flex justify-center ">
         <form
-          action=""
+          action="https://api.web3forms.com/submit"
+          method="POST"
           className=" min-w-full space-y-8 md:p-20 p-5 font-serif"
         >
           <div className="w-full grid md:grid-cols-2 grid-cols-1 gap-10">
             <input
+              type="hidden"
+              name="access_key"
+              value="c4cea03b-f4fe-4951-b90f-1285bd336637"
+            />
+            <input
               type="text"
               placeholder="Your Name"
+              name="Name"
+              required
               className="border-2 focus:border-black h-10 outline-none pl-2"
             />
             <input
               type="email"
               placeholder="Your Email"
+              name="Email"
+              required
               className="border-2 focus:border-black h-10 outline-none pl-2"
             />
           </div>
@@ -93,27 +102,33 @@ function Contact() {
             <input
               type="text"
               placeholder="Subject"
+              name="Subject"
+              required
               className="border-2 focus:border-black h-10 w-full outline-none pl-2"
             />
           </div>
           <div>
             <textarea
               placeholder="Message"
+              name="Message"
+              required
               className="border-2 focus:border-black min-h-32 w-full outline-none p-2"
             ></textarea>
           </div>
-          <Link
-            href="/contact"
+
+          <button
+            type="submit"
             className="relative inline-block md:px-10 px-8 py-2 text-white border-2 border-black group bg-[#202426] overflow-hidden"
           >
             <span className="relative z-10 transition-colors duration-300 group-hover:text-[#202426]">
               Submit
             </span>
             <span className="absolute inset-0 bg-white transition-all duration-300 scale-y-0 group-hover:scale-y-100 origin-bottom "></span>
-          </Link>
+          </button>
+
         </form>
       </div>
-      <DelieverDetails/>
+      <DelieverDetails />
     </section>
   );
 }

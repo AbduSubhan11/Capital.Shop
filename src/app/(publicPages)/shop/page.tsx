@@ -21,12 +21,12 @@ function Cards() {
   const [allData, setAllData] = useState<Product[]>([]);
   const [searchValue, setSearchValue] = useState("");
   const [filterCategory, setFilterCategory] = useState("");
-  const {addToWish} = useWish()
+  const { addToWish } = useWish();
 
-  const WishBtnHandler = (product:Product)=>{
-    addToWish(product)
-  }
-  
+  const WishBtnHandler = (product: Product) => {
+    addToWish(product);
+  };
+
   useEffect(() => {
     const filterData = ProductsData.filter((product) => product !== undefined);
     setAllData(filterData);
@@ -34,7 +34,7 @@ function Cards() {
 
   return (
     <>
-      <div className="max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:p-20">
+      <div className="max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 md:p-20  ">
         <div className="min-w-full md:p-0 p-5">
           <h1 className="font-bold md:text-3xl text-xl ">PRODUCT OVERVIEW</h1>
         </div>
@@ -129,7 +129,7 @@ function Cards() {
                 <div className="flex justify-between">
                   <h1>{product.name}</h1>
                   <svg
-                    onClick={()=>WishBtnHandler(product)}
+                    onClick={() => WishBtnHandler(product)}
                     className="h-7 w-10 hover:cursor-pointer hover:fill-red-600"
                     width="24"
                     height="24"
