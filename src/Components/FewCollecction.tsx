@@ -16,7 +16,7 @@ function FewCollecction() {
             className="object-cover w-full h-full "
           />
         </div>
-        <div className="md:absolute left-[33rem] top-32">
+        <div className="md:absolute left-[10rem] lg:left-[20rem] xl:left-[33rem] top-20 lg:top-32">
           <h1 className="text-3xl font-bold font-serif">
             Clothing Collections
           </h1>
@@ -26,7 +26,7 @@ function FewCollecction() {
         </div>
       </div>
 
-      <div className="md:absolute left-48 p-5 space-y-5 z-10">
+      <div className="md:absolute left-20 xl:left-48 p-5 space-y-5 z-10">
         <div className="md:w-[30vw]">
           <Image
             src={glasses}

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function DelieverDetails() {
   return (
-    <section className=" grid grid-cols-1 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
+    <section className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
 
       <div className="md:flex-col flex justify-center items-center " >
         <div className="md:w-[8vw] w-[30vw] ">
