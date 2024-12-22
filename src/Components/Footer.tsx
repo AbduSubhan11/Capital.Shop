@@ -9,7 +9,7 @@ function Footer() {
   const [newsLater, setNewsLater] = useState(false);
   return (
     <footer className="bg-[#F4F4F4] mt-32">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-4 md:px-10 py-4 md:py-8 ">
         <div className="space-y-9">
           <div
             className="text-xl font-bold flex items-center justify-between"

@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCart } from "../../context/cartContext";
-import { useWish } from "../../context/wishlistContext";
+import { useCart } from "../context/cartContext";
+import { useWish } from "../context/wishlistContext";
 
 function NavBar() {
   const pathname = usePathname();
@@ -19,7 +19,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="flex md:p-5 p-4 justify-between items-center max-w-full z-20 sticky top-0 border-b-2 bg-[#FFFFFF]">
+    <nav className="flex px-4 md:px-10 py-4 md:py-5 justify-between items-center max-w-full z-20 sticky top-0 border-b-2 bg-[#FFFFFF]">
       {/* NAV HEADING         */}
       <div>
         <h1 className="font-bold font-sans text-3xl">CAPITAL.SHOP</h1>

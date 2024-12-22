@@ -1,14 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import heroesImg from "../../public/Image/heroes pic.jpg"
+import heroesImg from "../../public/Image/heroes pic.jpg";
 import Image from "next/image";
 
 function HeroSection() {
   return (
-    <section
-      className="grid md:grid-cols-2 bg-[#f5f5f5] text-[#020817] max-w-full overflow-hidden"
-      id="heroes"
-    >
+    <section className="grid md:grid-cols-2 bg-[#f5f5f5] text-[#020817] max-w-full overflow-hidden">
       <div className=" md:py-28 py-12 md:px-10 px-5 min-w-[50%] space-y-5">
         <div>
           <h1 className="md:text-5xl text-3xl font-bold" id="HeroesHeading">
