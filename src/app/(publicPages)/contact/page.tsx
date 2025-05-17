@@ -5,7 +5,7 @@ import DelieverDetails from "../../../Components/DelieverDetails";
 function Contact() {
   return (
     <section className="max-w-full space-y-20">
-      <div className="grid grid-cols-1  lg:grid-cols-3 gap-10 sm:gap-20 mt-10 sm:mt-20 text-center w-full mx-auto">
+      {/* <div className="grid grid-cols-1  lg:grid-cols-3 gap-10 sm:gap-20 mt-10 sm:mt-20 text-center w-full mx-auto">
         <div>
           <svg
             className="h-8 w-8 mx-auto"
@@ -68,7 +68,7 @@ function Contact() {
           <p className="font-bold sm:text-2xl text-xl mt-2">Location</p>
           <p className="text-gray-400 sm:text-2xl text-xl">Karachi,Pakistan</p>
         </div>
-      </div>
+      </div> */}
 
       {/* FORM */}
       <div className="flex justify-center ">
